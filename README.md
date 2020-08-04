@@ -1,2 +1,2 @@
-# the-odin-project-notes
-A collection of notes documenting important information from The Odin Project for reference
+# Ruby
+A collection of notes documenting important information about the Ruby programming language
