@@ -239,3 +239,23 @@ Pretty self explanatory.
 * [true](https://ruby-doc.com/core/TrueClass.html)
 * [false](https://ruby-doc.com/core/FalseClass.html)
 * [nil](https://ruby-doc.com/core/NilClass.html)
+
+### Arrays
+
+An ordered list of information. Can be made up of strings, integers, floats, booleans, or any other data type.
+
+```ruby
+arr = [1, 2, 3, 4, 5]
+
+arr[0] #=> 1
+arr[-2] #=> 4
+
+colors = ["red", "orange", "green", "yellow", "purple"]
+
+users = ["user1", "user2", "user3", "user4"]
+
+bool_arr = [true, false, true, true, true, false]
+```
+
+#### Docs
+* [Array](https://ruby-doc.org/core-2.7.0/Array.html)
