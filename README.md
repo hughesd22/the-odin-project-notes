@@ -259,3 +259,17 @@ bool_arr = [true, false, true, true, true, false]
 
 #### Docs
 * [Array](https://ruby-doc.org/core-2.7.0/Array.html)
+
+### Hashes
+
+A hash, also referred to as a *dictionary* or as an *associative array*, is a set of key-value pairs. Each key, usually represented by a symbol, is unique and points to a specific piece of data.
+
+Data can be retrieved from the hash by referencing its corresponding key.
+
+```ruby
+animal_sounds = {:dog => "bark", :cat => "meow", :pig => "oink"}
+
+animal_sounds[:dog] #=> "bark"
+
+animal_sounds[:cat] #=> "meow"
+```
