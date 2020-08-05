@@ -189,7 +189,7 @@ puts 'Hello, #{name}!' #=> "Hello, #{name}!"
 
 #### Converting other objects to string
 
-* <string\>**.to_s**
+* <object>**.to_s**
 
 ```ruby
 5.to_s #=> "5"
