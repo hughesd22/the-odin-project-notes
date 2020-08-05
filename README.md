@@ -221,7 +221,7 @@ nil.to_s #=> ""
 
 ### Symbols
 
-Similar to strings, but whereas a string can be changed and has to be stored in memory every time it is used, even if an existing string with the same value already exists, symbols are stored in memory only once. This makes them faster in certain situations.
+Similar to strings, but whereas a string can be changed and has to be stored in memory every time it is used, even if an existing string with the same value already exists, symbols are stored in memory only once and then reused. This makes them faster in certain situations.
 
 A common use case where a symbol is preferred over a string is the key in a hash.
 
