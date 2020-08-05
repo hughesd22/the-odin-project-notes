@@ -33,6 +33,22 @@ If you want a more accurate answer, change one of the integers in the expression
 17 / 5.0 #=> 3.4
 ```
 
+Optionally, an underscore can be used as a thousands separator for readability.
+
+```ruby
+1862928571 # huh...what number is that exactly?
+
+# vs
+
+1_862_928_571 # Ah!
+
+
+# still evaluates the number as if the underscore was not there
+
+1_000 #=> 1000
+
+```
+
 #### Number Type Conversion
 
 Easy to convert between floats and ints.
