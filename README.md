@@ -142,7 +142,7 @@ Allow you to type representations of whitespace characters and to include quotat
 
 #### Interpolation
 
-Allows you to evaluate placeholder variables within a string.
+Allows you to evaluate expressions within a string.
 
 *Note*: Only works with double ( " ) quotation marks.
 
