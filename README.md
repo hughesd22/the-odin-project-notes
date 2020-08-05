@@ -111,7 +111,7 @@ Strings formed with single ( ' ) quotation marks are *string literals* (which do
 #### Escape Characters
 Allow you to type representations of whitespace characters and to include quotation marks as part of the string without ending it.
 
-*Note*: Only works with double (") quotation marks.
+*Note*: Only works with double ( " ) quotation marks.
 
 ```ruby
 " \\ " # backslash
@@ -128,7 +128,7 @@ Allow you to type representations of whitespace characters and to include quotat
 
 Allows you to evaluate placeholder variables within a string.
 
-*Note*: Only works with double (") quotation marks.
+*Note*: Only works with double ( " ) quotation marks.
 
 ```ruby
 name = "Robert"
@@ -187,7 +187,7 @@ puts 'Hello, #{name}!' #=> "Hello, #{name}!"
 "     hello, world   ".strip #=> "hello, world"
 ```
 
-#### Converting other object to string
+#### Converting other objects to string
 
 * <string\>**.to_s**
 
@@ -227,9 +227,9 @@ Simply put a colon in front of text.
 
 Pretty self explanatory.
 
-```true``` represents something that is true.
+```true``` represents something that is true
 
-```false``` represents something that is false.
+```false``` represents something that is false
 
 ```nil``` represents "nothing"
 
