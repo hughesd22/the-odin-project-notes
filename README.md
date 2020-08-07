@@ -292,7 +292,7 @@ animal_sounds[:dog] #=> "bark"
 animal_sounds[:cat] #=> "meow"
 ```
 
-### Variables
+## Variables
 
 Are a named placeholder for data. Think of it like a box with a label on it.
 
@@ -332,7 +332,7 @@ age = 26
 puts age #=> 26
 ```
 
-#### Assignment Operators
+### Assignment Operators
 
 Shorthand way of performing an operation on the original value of a variable and then reassigning that value to the variable.
 
@@ -355,7 +355,7 @@ temp = 70
 temp /= 10 #=> temp = 7
 ```
 
-#### Naming Variables
+### Naming Variables
 Ruby aims to be natural to read and easy to write. Variable names should mirror this. A variable name should, as best as it can, describe the value held by the variable.
 
 Names should be lowercase and use snake_case when they contain multiple words.
@@ -370,7 +370,7 @@ age = 19
 first_name = "Bob"
 ```
 
-#### Variables are References
+### Variables are References
 The box analogy breaks down a little bit, because in practice variables point to data in memory. Altering a variable that points to the another variable will actually alter the value stored in memory, thus affecting both variables since they simply point to the value stored in memory.
 
 ```ruby
@@ -445,7 +445,9 @@ puts b #=> 4
 
 ...it's that when the underlying value that both variables point to is altered (not just reassignment of one of the variables, which creates a new object), both variables will be affected since they point to the same object in memory.
 
-#### Getting Data from a User
+
+
+### Getting Data from a User
 
 One can collect string data from a user by using the ```gets``` method (which stands for "get string").
 
@@ -471,7 +473,7 @@ Bob
 # name = "Bob"
 ```
 
-#### Variable Scope
+### Variable Scope
 
 Variables in Ruby are scoped by block. A block is a piece of code following a method invocation, usually delimited by curly braces ```{}``` or ```do/end```.
 
@@ -504,7 +506,7 @@ puts a #=> 5
 puts b #=> error, b not defined in outer scope since it was initialized in inner scope
 ```
 
-#### Variable Types
+### Variable Types
 
 There are five types of variables in Ruby.
 
