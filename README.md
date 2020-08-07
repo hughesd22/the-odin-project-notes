@@ -289,3 +289,96 @@ animal_sounds[:dog] #=> "bark"
 
 animal_sounds[:cat] #=> "meow"
 ```
+
+### Variables
+
+Are a named placeholder for data. Think of it like a box with a label on it.
+
+```ruby
+# Defining a variable
+age = 26
+
+puts age #=> 26
+
+# Assigning the result of an expression to a var
+age = 20 + 6
+
+puts age #=> 26
+```
+
+*Note*: Variables are not *declared* (created without assigning a value) in Ruby. You must *define* (assign a value to) a variable when you create it.
+
+```ruby
+user_name = "Bob" #=> OK
+
+user_name #=> error
+```
+
+Variable names are reusable. You can assign a new value at any time, overriding the previous value.
+
+```ruby
+# define
+age = 18
+
+puts age #=> 18
+
+# re-assign
+age = 26
+
+puts age #=> 26
+```
+
+#### Assignment Operators
+
+Shorthand way of performing an operation on the original value of a variable and then reassigning that value to the variable.
+
+* +=
+* -=
+* *=
+* /=
+
+```ruby
+age = 20
+age += 6 #=> age = 26
+
+acct_bal = 500
+acct_bal -= 15 #=> acct_bal = 485
+
+cash = 100
+cash *= 2 #=> cash = 200
+
+temp = 70
+temp /= 10 #=> temp = 7
+```
+
+#### Naming Variables
+Ruby aims to be natural to read and easy to write. Variable names should mirror this. A variable name should, as best as it can, describe the value held by the variable.
+
+Names should be lowercase and use snake_case.
+
+```ruby
+# NO
+a = 19
+string = "Bob"
+
+# YES
+age = 19
+name = "Bob"
+```
+
+#### Variables are References
+The box analogy breaks down a little bit, because in practice variables point to data in memory. Altering a variable that points to the another variable will actually alter the value stored in memory, thus affecting both variables since they simply point to the value stored in memory.
+
+```ruby
+destination = "Tokyo"
+current_location = destination
+
+puts destination #=> "Tokyo"
+puts current_location #=> "Tokyo"
+
+current_location.upcase!
+
+puts current_location #=> "TOKYO", as expected
+
+puts destination #=> "TOKYO", this variable was changed too!
+```
