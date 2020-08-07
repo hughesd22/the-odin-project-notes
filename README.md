@@ -428,3 +428,35 @@ Bob
 # name = "Bob"
 ```
 
+#### Variable Scope
+
+Variables in Ruby are scoped by block. A block is a piece of code following a method invocation, usually delimited by curly braces ```{}``` or ```do/end```.
+
+*Note*: Inner scope can access variables defined in outer scope, but not vice versa.
+
+```ruby
+# outer scope
+a = 5
+
+1.times do |n|
+  # inner scope
+
+  # can access the variable defined in outer scope and re-assign it
+  a = 3
+end
+
+puts a #=> 3
+```
+
+```ruby
+# outer scope
+a = 5
+
+1.times do |n|
+  # inner scope
+  b = 3
+end
+
+puts a #=> 5
+puts b #=> error, b not defined in outer scope since it was initialized in inner scope
+```
