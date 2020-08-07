@@ -460,3 +460,48 @@ end
 puts a #=> 5
 puts b #=> error, b not defined in outer scope since it was initialized in inner scope
 ```
+
+#### Variable Types
+
+There are five types of variables in Ruby.
+
+* Constants
+  * Defined by capitalizing every letter in the variable name
+* Global
+  * Defined by starting the variable name with ```$```
+* Class
+  * Defined by starting the variable name with ```@@```
+* Instance
+  * Defined by starting the variable name with ```@```
+* Local
+
+```ruby
+# Constants
+A_CONSTANT = "A value that never changes, available through all scopes"
+
+
+# Global
+$var_name = "Also available through all scopes"
+
+# global variables tend to lead to unexpected complications; best to avoid
+
+
+# Class
+@@class_var = 1
+
+# accessible by instances of the class and by the class itself
+
+# used when you need a variable that is related to the class, but each instance of the class does not need its own value for the variable
+
+
+# Instance
+@instance_var = 0
+
+# accessible throughout the current instance of the parent class
+
+
+# Local
+local_var = "Hello World"
+
+# most common and obeys all scope boundaries
+```
