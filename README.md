@@ -112,6 +112,8 @@ Strings formed with single ( ' ) quotation marks are *string literals* (which do
 "Hello".concat(" ").concat("World") #=> "Hello World"
 ```
 
+*Note*: The shovel operator ( ```<<``` ) and the concat method (<string\>```.concat```) alter the original string, rather than creating a new one (as ```+``` does). This makes them more efficient.
+
 #### Substrings
 
 ```ruby
