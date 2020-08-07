@@ -356,7 +356,7 @@ temp /= 10 #=> temp = 7
 #### Naming Variables
 Ruby aims to be natural to read and easy to write. Variable names should mirror this. A variable name should, as best as it can, describe the value held by the variable.
 
-Names should be lowercase and use snake_case.
+Names should be lowercase and use snake_case when they contain multiple words.
 
 ```ruby
 # NO
@@ -365,7 +365,7 @@ string = "Bob"
 
 # YES
 age = 19
-name = "Bob"
+first_name = "Bob"
 ```
 
 #### Variables are References
