@@ -402,7 +402,7 @@ puts b #=> 4
 
 It's only when the underlying value that both variables point to is altered (not just reassignment of one of the variables) that both variables will be affected.
 
-### Getting Data from a User
+#### Getting Data from a User
 
 One can collect string data from a user by using the ```gets``` method (which stands for "get string").
 
@@ -427,3 +427,4 @@ Bob
 
 # name = "Bob"
 ```
+
