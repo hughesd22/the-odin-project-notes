@@ -310,7 +310,9 @@ puts age #=> 26
 
 ```ruby
 user_name = "Bob" #=> OK
+```
 
+```ruby
 user_name #=> error
 ```
 
