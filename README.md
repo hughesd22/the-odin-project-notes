@@ -440,7 +440,7 @@ Variables in Ruby are scoped by block. A block is a piece of code following a me
 # outer scope
 a = 5
 
-1.times do |n|
+1.times do
   # inner scope
 
   # can access the variable defined in outer scope and re-assign it
@@ -454,7 +454,7 @@ puts a #=> 3
 # outer scope
 a = 5
 
-1.times do |n|
+1.times do
   # inner scope
   b = 3
 end
