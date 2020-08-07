@@ -401,3 +401,29 @@ puts b #=> 4
 ```
 
 It's only when the underlying value that both variables point to is altered (not just reassignment of one of the variables) that both variables will be affected.
+
+### Getting Data from a User
+
+One can collect string data from a user by using the ```gets``` method (which stands for "get string").
+
+```ruby
+name = gets
+
+## user input
+Bob
+##
+
+# name = "Bob\n"
+```
+
+The newline character ( \n ) at the end of the captured user input represents the enter key. The ```.chomp``` method allows us to remove that to clean up our data before storing it.
+
+```ruby
+name = gets.chomp
+
+## user input
+Bob
+##
+
+# name = "Bob"
+```
