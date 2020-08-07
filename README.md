@@ -384,3 +384,20 @@ puts current_location #=> "TOKYO", as expected
 
 puts destination #=> "TOKYO", this variable was changed too!
 ```
+
+At the same time, variables are not deeply linked to each other as one might first imagine.
+
+```ruby
+a = 4
+b = a
+
+puts a #=> 4
+puts b #=> 4
+
+a = 7
+
+puts a #=> 7
+puts b #=> 4
+```
+
+It's only when the underlying value that both variables point to is altered (not just reassignment of one of the variables) that both variables will be affected.
