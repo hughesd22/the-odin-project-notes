@@ -387,7 +387,48 @@ puts current_location #=> "TOKYO", as expected
 puts destination #=> "TOKYO", this variable was changed too!
 ```
 
-At the same time, variables are not deeply linked to each other as one might first imagine.
+Looking at the object id's of the variables can help illustrate this point.
+
+```ruby
+a = "hi there"
+b = a
+
+puts a #=> "hi there"
+puts b #=> "hi there"
+
+puts a.object_id #=> 180
+puts b.object_id #=> 180
+
+a = "not here"
+
+puts a #=> "not here"
+puts b #=> "hi there"
+
+puts a.object_id #=> 200
+puts b.object_id #=> 180
+```
+---
+
+```ruby
+a = "hi there"
+b = a
+
+puts a #=> "hi there"
+puts b #=> "hi there"
+
+puts a.object_id #=> 180
+puts b.object_id #=> 180
+
+a << ", Bob"
+
+puts a #=> "hi there, Bob"
+puts b #=> "hi there, Bob"
+
+puts a.object_id #=> 180
+puts b.object_id #=> 180
+```
+
+It's not that variables are deeply linked to each other...
 
 ```ruby
 a = 4
@@ -402,7 +443,7 @@ puts a #=> 7
 puts b #=> 4
 ```
 
-It's only when the underlying value that both variables point to is altered (not just reassignment of one of the variables) that both variables will be affected.
+...it's that when the underlying value that both variables point to is altered (not just reassignment of one of the variables, which creates a new object), both variables will be affected since they point to the same object in memory.
 
 #### Getting Data from a User
 
