@@ -445,7 +445,7 @@ puts b #=> 4
 
 ...it's that when the underlying value that both variables point to is altered (not just reassignment of one of the variables, which creates a new object), both variables will be affected since they point to the same object in memory.
 
-
+* [Visual Explanation](http://ruby.bastardsbook.com/chapters/variables/#visual-guide)
 
 ### Getting Data from a User
 
