@@ -447,32 +447,6 @@ puts b #=> 4
 
 * [Visual Explanation](http://ruby.bastardsbook.com/chapters/variables/#visual-guide)
 
-### Getting Data from a User
-
-One can collect string data from a user by using the ```gets``` method (which stands for "get string").
-
-```ruby
-name = gets
-
-## user input
-Bob
-##
-
-# name = "Bob\n"
-```
-
-The newline character ( \n ) at the end of the captured user input represents the enter key. The ```.chomp``` method allows us to remove that to clean up our data before storing it.
-
-```ruby
-name = gets.chomp
-
-## user input
-Bob
-##
-
-# name = "Bob"
-```
-
 ### Variable Scope
 
 Variables in Ruby are scoped by block. A block is a piece of code following a method invocation, usually delimited by curly braces ```{}``` or ```do/end```.
@@ -563,6 +537,31 @@ local_var = "Hello World"
 ### Input
 
 * ```gets```
+  * stands for "get string"
   * prompts user for input and then returns that input, appending a newline
 * ```chomp```
   * String class method commonly used to trim separators
+
+#### Examples
+
+```ruby
+name = gets
+
+## user input
+Bob
+##
+
+# name = "Bob\n"
+```
+
+---
+
+```ruby
+name = gets.chomp
+
+## user input
+Bob
+##
+
+# name = "Bob"
+```
