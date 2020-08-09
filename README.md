@@ -567,3 +567,185 @@ Bob
 
 # name = "Bob"
 ```
+
+## Conditional Logic
+
+*Note*: The only false values in Ruby are ```nil``` and ```false```. Everything else evaluates to true, even ```0```, ```""```, and ```"false"```.
+
+### ```if```
+
+```ruby
+if <statement_to_be_evaluated> == true
+  puts "Hello, World!"
+end
+```
+
+---
+
+**single line variation**
+
+```ruby
+puts "Hello, World!" if <statement_to_be_evaluated> == true
+```
+
+```ruby
+if x == 3 then puts "x is 3" end
+```
+
+### ```else``` & ```elsif```
+
+```ruby
+if 1 < 2
+  puts "Something"
+else
+  puts "Something else"
+end
+```
+
+---
+
+```ruby
+if 1 >= 2
+  print "an option"
+elsif num < max_num
+  print "another one"
+  # can have more than one elsif
+else
+  print "the final one"
+end
+```
+
+### Comparison Operators
+
+* ==
+* !=
+* \>
+* <
+* \>=
+* <=
+* <object\>**.eql?**(<object\>)
+  * checks both the value type and the actual value
+* <object\>**.equal?**(<object\>)
+  * checks if both values are the exact same object in memory
+* <object\> **<=>** <object\>
+  * spaceship operator
+  * returns ```-1``` if left is less than right
+  * returns ```0``` if equal
+  * returns ```1``` if left is greater than right
+  * most commonly used in sorting functions
+
+### Logical Operators
+
+* &&
+* ||
+* !
+
+*Note*: Expressions always evaluated from left to right. Using &&, if left expression returns false, right never checked. Using ||, if left expression returns true, right never checked.
+
+### ```case```
+
+```ruby
+grade = "A"
+
+class_result = case grade
+  when "A" then "Exceeded"
+  when "B" then "Pretty good"
+  when "C" then "Average"
+  when "D" then "Hey man, D's get degrees"
+  else "Failed"
+end
+```
+
+---
+
+```ruby
+grade = "F"
+
+case grade
+  when "A"
+    puts "Genius!"
+    acct_bal += 500
+  when "D"
+    puts "Try again. You'll get it next time!"
+    stop_trying = false
+  else
+    puts "Better try a different field..."
+    stop_trying = true
+end
+```
+
+---
+
+```ruby
+grade_avg = 96
+grade_letter = ""
+
+case
+  when grade_avg >=90
+    grade_letter = "A"
+
+  when grade_avg >= 80
+    grade_letter = "B"
+
+  when grade_avg >= 70
+    grade_letter = "C"
+
+  when grade_avg >= 60
+    grade_letter = "D"
+
+  else
+    grade_letter = "F"
+end
+```
+
+### ```unless```
+
+Opposite of an ```if``` statement. Only processes code block if expression evaluates to false.
+
+```ruby
+age = 26
+
+unless age < 21
+  puts "Have a beer"
+end
+```
+
+---
+
+```ruby
+height_ft = 6
+
+unless height_ft < 4
+  puts "Welcome aboard the coaster!"
+end
+```
+
+---
+
+```ruby
+grade = 96
+
+unless grade < 60
+  puts "Hey, you passed!"
+else
+  puts "R.I.P."
+end
+```
+
+---
+
+```ruby
+puts "x isn't 3" unless x == 3
+```
+
+### Ternary Operator
+
+Is a single line if/else
+
+```ruby
+age = 26
+
+response = age < 21 ? "You have your whole life ahead of you!" : "You're all grown up."
+
+puts response #=> "You're all grown up."
+```
