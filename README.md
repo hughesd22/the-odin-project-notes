@@ -550,3 +550,19 @@ local_var = "Hello World"
 
 # most common and obeys all scope boundaries
 ```
+
+## Input & Output
+
+### Output
+
+* ```puts```
+  * outputs passed argument, appending a newline, and returns ```nil```
+* ```print```
+  * outputs passed argument only, no newline, and returns ```nil```
+
+### Input
+
+* ```gets```
+  * prompts user for input and then returns that input, appending a newline
+* ```chomp```
+  * String class method commonly used to trim separators
