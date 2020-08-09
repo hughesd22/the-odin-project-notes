@@ -531,7 +531,8 @@ local_var = "Hello World"
 
 * ```puts```
   * outputs passed argument, appending a newline, and returns ```nil```
-  * can use shorthand ```p```
+* ```p```
+  * same as ```puts```, but outputs a more raw version of the object that was passed in as an argument
 * ```print```
   * outputs passed argument only, no newline, and returns ```nil```
 
