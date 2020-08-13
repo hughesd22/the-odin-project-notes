@@ -791,3 +791,29 @@ end
 ```
 
 *Note*: Notice how much more readable it is to use an ```until``` loop here instead of a ```while``` loop. Instead of using negated logic (```while gets.chomp != "yes"```) the code is much cleaner and easier to parse (```until gets.chomp = "yes"```).
+
+### For
+
+Iterates through a collection of information, such as an array or range.
+
+```ruby
+for i in 0..5
+  puts "i: #{i}"
+end
+```
+
+### Times
+
+Iterations a specified number of times. Actually a method of the ```Integer``` class.
+
+```ruby
+5.times do
+  puts "Hello, World!"
+end
+```
+
+```ruby
+5.times do |i|
+  puts "i: #{i}"
+end
+```
