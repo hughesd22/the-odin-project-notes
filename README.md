@@ -681,7 +681,7 @@ grade_avg = 96
 grade_letter = ""
 
 case
-  when grade_avg >=90
+  when grade_avg >= 90
     grade_letter = "A"
 
   when grade_avg >= 80
