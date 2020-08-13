@@ -854,3 +854,19 @@ end
 ```next``` will jump from the line it is on to the next loop iteration, without executing the code beneath it for the current loop iteration
 
 ```break``` will exit the loop immediately, without executing any more code within the loop
+
+
+### Iterators
+
+Methods that loop over a given set of data and allow you to operate on each element in the collection.
+
+Preferred over loops, where possible.
+
+```ruby
+dog_names = ["Astro", "Bella", "Kaine", "Jesse", "Lucky", "Pip", "Kronos", "Terra", "Shadow"]
+
+# Iterator
+dog_names.each {|dog_name| puts dog_name}
+
+# prints each name in the array to the screen, each on its own line
+```
