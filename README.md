@@ -848,3 +848,9 @@ loop do
   end
 end
 ```
+
+### Reserved Loop Keywords
+
+```next``` will jump from the line it is on to the next loop iteration, without executing the code beneath it for the current loop iteration
+
+```break``` will exit the loop immediately, without executing any more code within the loop
