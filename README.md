@@ -754,6 +754,8 @@ puts response #=> "You're all grown up."
 
 ### While
 
+Continues as long as a condition is true.
+
 ```ruby
 i = 0
 
