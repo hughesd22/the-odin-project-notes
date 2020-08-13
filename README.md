@@ -754,7 +754,7 @@ puts response #=> "You're all grown up."
 
 ### While
 
-Continues as long as a condition is true.
+Iterates *while* a condition is true.
 
 ```ruby
 i = 0
@@ -773,7 +773,7 @@ end
 
 ### Until
 
-Opposite of ```while``` loops. Continues as long as a condition is false.
+Opposite of ```while``` loops. Iterates *until* a condition is true.
 
 ```ruby
 i = 0
