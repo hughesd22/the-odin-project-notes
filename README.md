@@ -830,3 +830,19 @@ Iterates from one number ```upto``` another or from one number ```downto``` anot
 # downto
 10.downto(5) { |i| puts "i: #{i}" }
 ```
+
+### Do/While
+
+Similar to while loop, but ensures that the code inside the loop is executed at least once.
+
+```ruby
+loop do
+  puts "Do you want to do that again?"
+  answer = gets.chomp
+
+  # conditional will break out of loop once the correct answer is received
+  if answer != "y"
+    break
+  end
+end
+```
