@@ -749,3 +749,22 @@ response = age < 21 ? "You have your whole life ahead of you!" : "You're all gro
 
 puts response #=> "You're all grown up."
 ```
+
+## Loops
+
+### While
+
+```ruby
+i = 0
+
+while i < 10 do
+  puts "i: #{i}"
+  i += 1
+end
+```
+
+```ruby
+while gets.chomp != "yes" do
+  puts "Are you ready?"
+end
+```
