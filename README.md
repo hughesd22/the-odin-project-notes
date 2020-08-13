@@ -817,3 +817,16 @@ end
   puts "i: #{i}"
 end
 ```
+
+### Upto / Downto
+
+Iterates from one number ```upto``` another or from one number ```downto``` another. Actually methods of the ```Integer``` class.
+
+```ruby
+# upto
+5.upto(10) { |i| puts "i: #{i}" }
+
+
+# downto
+10.downto(5) { |i| puts "i: #{i}" }
+```
