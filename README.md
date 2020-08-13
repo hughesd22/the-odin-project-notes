@@ -770,3 +770,24 @@ while gets.chomp != "yes" do
   puts "Are you ready?"
 end
 ```
+
+### Until
+
+Opposite of ```while``` loops. Continues as long as a condition is false.
+
+```ruby
+i = 0
+
+until i > 10 do
+  puts "i: #{i}"
+  i += 1
+end
+```
+
+```ruby
+until gets.chomp = "yes" do
+  puts "Ready?"
+end
+```
+
+*Note*: Notice how much more readable it is to use an ```until``` loop here instead of a ```while``` loop. Instead of using negated logic (```while gets.chomp != "yes"```) the code is much cleaner and easier to parse (```until gets.chomp = "yes"```).
