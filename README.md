@@ -870,3 +870,11 @@ dog_names.each {|dog_name| puts dog_name}
 
 # prints each name in the array to the screen, each on its own line
 ```
+
+### Blocks
+
+Blocks in Ruby come in two styles, ```{}``` and ```do/end```.
+
+```{}``` is used when all the code to be executed in the block can be contained in one line
+
+```do/end``` is used when the code to be executed in the block needs to span multiple lines
