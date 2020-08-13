@@ -802,6 +802,8 @@ for i in 0..5
 end
 ```
 
+*Note*: While the other loops mentioned here return ```nil```, the For loop returns the range it is iterating over.
+
 ### Times
 
 Iterations a specified number of times. Actually a method of the ```Integer``` class.
