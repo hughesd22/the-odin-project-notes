@@ -878,3 +878,153 @@ Blocks in Ruby come in two styles, ```{}``` and ```do/end```.
 ```{}``` is used when all the code to be executed in the block can be contained in one line
 
 ```do/end``` is used when the code to be executed in the block needs to span multiple lines
+
+## Arrays
+
+### Array Literal
+
+```ruby
+num_array = [1, 2, 3, 4, 5]
+str_array = ["One", "Two", "Three"]
+```
+
+### New Array Method
+
+```ruby
+Array.new #=> []
+
+# Can pass two optional arguments, initial size and default value
+
+Array.new(3, "Hi") #=> ["Hi", "Hi", "Hi"]
+Array.new(3, Array.new) #=> [[], [], []]
+```
+
+### Accessing Elements
+
+* As expected, Ruby uses zero-based indexing.
+
+* Calling an invalid position in the array will result in ```nil```.
+
+* Can use a negative index, which starts counting from the end of the array instead of the beginning.
+
+```ruby
+names = ["Bob", "Joe", "Dan", "Rebecca", "Stacy"]
+
+names[0] #=> "Bob"
+names[2] #=> "Dan"
+
+names[-1] #=> "Stacy"
+names[-3] #=> "Dan"
+```
+
+### Some Array Methods
+
+* #first
+* #last
+
+```ruby
+# first
+num_array = [1, 2, 3]
+
+num_array.first #=> 1
+num_array.first(2) #=> [1, 2]
+
+num_array.last #=> 3
+num_array.last(3) #=> [1, 2, 3]
+
+# last
+```
+
+### Adding / Removing Elements
+
+* #push
+* <<
+* #pop
+* #shift
+* #unshift
+
+```ruby
+num_array = [1, 2, 3]
+
+# Adding
+
+## to end
+num_array.push(4, 5) #=> num_array = [1, 2, 3, 4, 5]
+
+num_array << 6 #=> num_array = [1, 2, 3, 4, 5, 6]
+
+## to beginning
+num_array.unshift(0) #=> num_array = [0, 1, 2, 3, 4, 5, 6]
+
+# Removing
+
+## from end
+num_array.pop #=> num_array = [0, 1, 2, 3, 4, 5]
+
+
+## from beginning
+num_array.shift #=> num_array = [1, 2, 3, 4, 5]
+
+# #shift and #pop can also take an integer argument, defining how many elements to remove
+
+num_array.shift(3) #=> num_array = [4, 5]
+num_array.pop(2) #=> num_array = []
+
+# #push, <<, and #unshift return the array, while #pop and #shift return the removed element
+```
+
+### Adding / Subtracting Arrays
+
+* \+
+  * returns a new array built by concatenating multiple arrays
+* #concat
+  * alters the array which the method was called on and returns that array
+* \-
+  * returns a copy of the first array, removing any elements contained in the second array
+
+```ruby
+arr_one = [1, 2, 3]
+arr_two = [4, 5, 6]
+
+arr_one + arr_two #=> [1, 2, 3, 4, 5, 6]
+
+# arr_one = [1, 2, 3]
+# arr_two = [4, 5, 6]
+
+# alternatively
+arr_one.concat(arr_two) #=> [1, 2, 3, 4, 5, 6]
+
+# arr_one = [1, 2, 3, 4, 5, 6]
+# arr_two = [4, 5, 6]
+
+# can combine more than two arrays
+a = [1, 2, 3]
+b = [4, 5, 6]
+c = [7, 8, 9]
+d = [10, 11, 12]
+
+a + b + c + d #=> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+
+a.concat(b, c, d) #=> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+```
+
+---
+
+```ruby
+a = [1, 2, 3, 4, 5, 6]
+b = [4, 5, 6]
+c = [2, 4, 6]
+
+a - b #=> [1, 2, 3]
+
+a - c #=> [1, 3, 5]
+
+a - b - c #=> [1, 3]
+
+a - (b - c) #=> [1, 2, 3, 4, 6]
+```
+
+There are a multitude of methods (over 150) to manipulate arrays in Ruby . To learn more, read the docs or call ```#methods``` on an array in irb.
+
+#### Docs
+* [Array](https://ruby-doc.org/core-2.7.0/Array.html)
