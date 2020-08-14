@@ -843,7 +843,7 @@ loop do
   answer = gets.chomp
 
   # conditional will break out of loop once the correct answer is received
-  if answer == "y"
+  if answer != "y"
     break
   end
 end
