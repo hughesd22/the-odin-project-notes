@@ -1071,6 +1071,20 @@ a - b - c #=> [1, 3]
 a - (b - c) #=> [1, 2, 3, 4, 6]
 ```
 
+### Converting Array to String
+
+* #join
+
+```ruby
+fruits = %w(Orange Apple Mango Pear)
+
+fruits.join #=> "OrangeAppleMangoPear"
+
+fruits.join(", ") #=> "Orange, Apple, Mango, Pear"
+
+fruits.join(" | ") #=> "Orange | Apple | Mango | Pear"
+```
+
 There are a multitude of methods (over 150) to manipulate arrays in Ruby . To learn more, read the docs or call ```#methods``` on an array in irb.
 
 #### Docs
