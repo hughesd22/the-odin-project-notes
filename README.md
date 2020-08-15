@@ -921,6 +921,9 @@ names[-3] #=> "Dan"
 
 * #first
 * #last
+* #map
+  * #collect (alias of #map)
+  * returns new array with results, does **not** mutate the caller
 
 ```ruby
 # first
@@ -929,10 +932,14 @@ num_array = [1, 2, 3]
 num_array.first #=> 1
 num_array.first(2) #=> [1, 2]
 
+# last
 num_array.last #=> 3
 num_array.last(3) #=> [1, 2, 3]
 
-# last
+# map/collect
+num_array.map(|num| num**2) #=> [1, 4, 9]
+num_array.collect(|num| num**2) #=> [1, 4, 9]
+
 ```
 
 ### Adding / Removing Elements
