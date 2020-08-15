@@ -940,6 +940,7 @@ num_array.last(3) #=> [1, 2, 3]
 num_array.map(|num| num**2) #=> [1, 4, 9]
 num_array.collect(|num| num**2) #=> [1, 4, 9]
 
+# num_array = [1, 2, 3]
 ```
 
 ### Adding / Removing Elements
