@@ -887,6 +887,22 @@ Blocks in Ruby come in two styles, ```{}``` and ```do/end```.
 num_array = [1, 2, 3, 4, 5]
 str_array = ["One", "Two", "Three"]
 ```
+---
+
+You can also use the shorthand ```%w``` notation to create a string array without having the type the commas and quotation marks. A way to remember this syntax is "Whitespace (w) separated array"
+
+```ruby
+names = %w(Bob Joe Jim) #=> ["Bob", "Joe", "Jim"]
+
+# Parenthesis can be replaced with almost any other character
+
+names = %w[Susan Beth Summer] #=> ["Susan", "Beth", "Summer"]
+
+names = %w{Ashley Heather Tiffany} #=> ["Ashley", "Heather", "Tiffany"]
+
+# even !
+fruits = %w!Orange Apple Banana Pear Mango! #=> ["Orange", "Apple", "Banana", "Pear", "Mango"]
+```
 
 ### New Array Method
 
@@ -924,6 +940,8 @@ names[-3] #=> "Dan"
 * #map
   * #collect (alias of #map)
   * returns new array with results, does **not** mutate the caller
+* #length
+  * #size (alias)
 
 ```ruby
 # first
@@ -941,6 +959,10 @@ num_array.map(|num| num**2) #=> [1, 4, 9]
 num_array.collect(|num| num**2) #=> [1, 4, 9]
 
 # num_array = [1, 2, 3]
+
+# length / size
+num_array.length #=> 3
+num_array.size #=> 3
 ```
 
 ### Adding / Removing Elements
