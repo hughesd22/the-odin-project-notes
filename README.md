@@ -1071,6 +1071,21 @@ a - b - c #=> [1, 3]
 a - (b - c) #=> [1, 2, 3, 4, 6]
 ```
 
+### Set Operators
+
+* &
+  * returns a new array containing the common elements in two arrays, removing duplicates
+* |
+  * returns a new array containing the unique elements in two arrays, removing duplicates
+
+```ruby
+# Intersection ( & )
+[1, 1, 3, 5] & [1, 2, 3]   #=> [1, 3]
+
+# Union ( | )
+[1, 2, 1, 2, 3, 5] | [1, 2, 3, 4, 100] #=> [1, 2, 3, 5, 4, 100]
+```
+
 ### Converting Array to String
 
 * #join
