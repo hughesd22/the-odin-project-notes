@@ -973,6 +973,23 @@ num_array.pop(2) #=> num_array = []
 # #push, <<, and #unshift return the array, while #pop and #shift return the removed element
 ```
 
+---
+
+```ruby
+# note that you can not add add multiple array elements using the shovel operator ( << ) unless you chain the calls, but you can using #push
+
+array = [1, 2, 3]
+array.push(4, 5, 6)
+
+# array = [1, 2, 3, 4, 5, 6]
+
+array << 7 << 8 << 9
+
+##
+# array = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+# works, but cumbersome compared to push or adding arrays together
+```
+
 ### Adding / Subtracting Arrays
 
 * \+
