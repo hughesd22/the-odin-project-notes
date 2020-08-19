@@ -1207,3 +1207,30 @@ hash2 = {
 
 hash1.merge(hash2) #=> {"a" => 100, "b" => 254, "c" => 300}
 ```
+
+### Symbols as Hash Keys
+
+In practice, symbols are used as hash keys since they're more performant.
+
+```ruby
+american_cars = {
+  :chevrolet => "Corvette",
+  :ford => "Mustang",
+  :dodge => "Ram"
+}
+
+# there is also a shorthand syntax when using symbols that is similar to JavaScript objects and JSON
+
+japanese_cars = {
+  honda: "CR-V",
+  toyota: "Corolla",
+  nissan: "Altima"
+}
+
+japanese_cars #=> {:honda=>"CR-V", :toyota=>"Corolla", :nissan=>"Altima"}
+
+# Note that when accessing data from the hash, you still need to use the symbol syntax
+japanese_cars[honda] #=> NameError
+
+japanese_cars[:honda] #=> "CR-V"
+```
