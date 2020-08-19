@@ -1104,3 +1104,28 @@ There are a multitude of methods (over 150) to manipulate arrays in Ruby . To le
 
 #### Docs
 * [Array](https://ruby-doc.org/core-2.7.0/Array.html)
+
+## Hashes
+
+Similar to objects in JavaScript and dictionaries in Python.
+
+Unordered collection of key-value pairs.
+
+
+### Creating a Hash
+
+```ruby
+# Hash Literal
+hash = {
+  "hello" => "world",
+  "My Math Grade" => 96,
+  "number array" => [9,8,7],
+  "hashception" => {}
+}
+
+# Hash class #new method
+hash = Hash.new # hash = {}
+
+# Ruby is flexible. Can use numbers or symbols for keys as well
+hash = {9 => "nine", :six => 6}
+```
