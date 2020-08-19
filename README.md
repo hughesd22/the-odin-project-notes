@@ -1234,3 +1234,20 @@ japanese_cars[honda] #=> NameError
 
 japanese_cars[:honda] #=> "CR-V"
 ```
+
+### Iterating Over Hashes
+
+Similar to iterating over Arrays, but capture both key and value vars in the ```#each``` method.
+
+```ruby
+person = {
+  name: "Dan",
+  height: "6 ft",
+  age: 26,
+  hair: "brown"
+}
+
+person.each do |key, value|
+  puts "#{person[:name]}'s #{key} is #{value}."
+end
+```
