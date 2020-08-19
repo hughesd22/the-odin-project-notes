@@ -1151,3 +1151,21 @@ shoes.fetch("hiking") #=> KeyError
 # Can also return a default value instead of error
 shoes.fetch("hiking", "hiking boots") #=> "hiking boots"
 ```
+
+### Adding / Changing / Deleting Data
+
+```ruby
+fruit_trees = {
+  "spring" => "apricot",
+  "summer" => "orange"
+}
+
+# Adding
+fruit_trees["fall"] = "apple"
+
+# Changing
+fruit_trees["spring"] = "cherry"
+
+# Deleting
+fruit_trees.delete("fall") # also returns the value of the key-value pair removed, in this case "apple"
+```
