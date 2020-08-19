@@ -1169,3 +1169,41 @@ fruit_trees["spring"] = "cherry"
 # Deleting
 fruit_trees.delete("fall") # also returns the value of the key-value pair removed, in this case "apple"
 ```
+
+### Some Hash Class Methods
+
+* #keys
+  * returns array
+* #values
+  * returns array
+* #merge
+  * for identical keys, the hash being merged at will have its values overwritten by the hash being merged in
+  * non-destructive, returns a new hash with the result of the merge
+
+```ruby
+books = {
+  "My Side of the Mountain" => "Jean Craighead George",
+  "Eragon" => "Christopher Paolini",
+  "A Game of Thrones" => "George R. R. Martin"
+}
+
+# keys
+books.keys #=> ["My Side of the Mountain", "Eragon", "A Game of Thrones"]
+
+# values
+books.values #=> ["Jean Craighead George", "Christopher Paolini", "George R. R. Martin"]
+
+# merge
+
+hash1 = {
+  "a" => 100,
+  "b" => 200
+}
+
+hash2 = {
+  "b" => 254,
+  "c" => 300
+}
+
+hash1.merge(hash2) #=> {"a" => 100, "b" => 254, "c" => 300}
+```
