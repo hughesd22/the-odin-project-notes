@@ -1129,3 +1129,25 @@ hash = Hash.new # hash = {}
 # Ruby is flexible. Can use numbers or symbols for keys as well
 hash = {9 => "nine", :six => 6}
 ```
+
+### Accessing Values
+
+Similar to array, but uses key instead of index.
+
+```ruby
+shoes = {
+  "summer" => "sandals",
+  "winter" => "boots"
+}
+
+shoes["summer"] #=> "sandals"
+
+# Accessing a key that doesn't exist in the hash returns nil
+shoes["hiking"] #=> nil
+
+# Hash class has a #fetch method to prevent silent failing in this way
+shoes.fetch("hiking") #=> KeyError
+
+# Can also return a default value instead of error
+shoes.fetch("hiking", "hiking boots") #=> "hiking boots"
+```
