@@ -1251,3 +1251,6 @@ person.each do |key, value|
   puts "#{person[:name]}'s #{key} is #{value}."
 end
 ```
+
+#### Docs
+* [Hash](https://ruby-doc.org/core-2.7.1/Hash.html)
